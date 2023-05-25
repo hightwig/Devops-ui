@@ -1,4 +1,9 @@
 import React from 'react';
+
+import { Footer } from '../templates/Footer';
+
+// import { Footer } from '../templates/Footer';
+
 // Made by Yago Estévez (Twitter: @yagoestevez.com)
 // @ts-ignore
 
@@ -210,18 +215,6 @@ const Contact = () => {
 /** *********************
     Footer Component
    ********************** */
-
-const Footer = () => {
-  return (
-    <footer>
-      <div className="wrapper">
-        <h3>THANKS FOR VISITING</h3>
-        <p>© {new Date().getFullYear()} Yago Estévez.</p>
-        <SocialLinks />
-      </div>
-    </footer>
-  );
-};
 
 /** *********************
     Social Links Component
