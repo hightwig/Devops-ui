@@ -1,6 +1,10 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    fontFamily: {
+      body: ['Lato', 'sans-serif'],
+      display: ['Lato', 'sans-serif'],
+    },
     fontSize: {
       xs: '0.75rem',
       sm: '0.875rem',
