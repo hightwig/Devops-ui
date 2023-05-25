@@ -1,12 +1,85 @@
+const SocialLinks = () => {
+  return (
+    <div className="social">
+      <a
+        href="https://twitter.com/yagoestevez"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Link to author's Twitter profile"
+      >
+        {' '}
+        <i className="fab fa-twitter" />
+      </a>
+      <a
+        id="profile-link"
+        href="https://github.com/yagoestevez"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Link to author's GitHub Profile"
+      >
+        {' '}
+        <i className="fab fa-github" />
+      </a>
+      <a
+        href="https://codepen.io/yagoestevez"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Link to author's Codepen Profile"
+      >
+        {' '}
+        <i className="fab fa-codepen" />
+      </a>
+    </div>
+  );
+};
+
+const ContactEmail = () => {
+  return (
+    <>
+      <div className="container -mb-40 text-right">
+        <div className="heading-wrapper">
+          <div className="heading">
+            <p className="title">
+              برای دریافت مشاوره و راهنمایی با ما درارتباط باشید
+            </p>
+            <p className="separator" />
+            <p className="subtitle">فرم درخواست مشاوره را پر کنید</p>
+          </div>
+          <SocialLinks />
+        </div>
+        <form id="contact-form" action="#">
+          <input
+            className="text-right"
+            placeholder="نام و نام خانوادگی"
+            name="name"
+            type="text"
+            required
+          />
+          <input
+            className="text-right"
+            placeholder="ایمیل"
+            name="email"
+            type="email"
+            required
+          />
+          <textarea className="text-right" placeholder="متن" name="message" />
+          <input className="button" id="submit" value="Submit" type="submit" />
+        </form>
+      </div>
+    </>
+  );
+};
+
 const Footer = () => {
   return (
-    <section>
-      <div className="text-center text-neutral-600  lg:text-left">
+    <section id="contact" className="flex flex-col">
+      <ContactEmail />
+      <div className="text-center text-neutral-100  lg:text-left">
         <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
           <div className="flex justify-center">
             <a
               href="#!"
-              className="mr-6 text-neutral-600 dark:text-neutral-200"
+              className="mr-6 text-neutral-100 dark:text-neutral-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +92,7 @@ const Footer = () => {
             </a>
             <a
               href="#!"
-              className="mr-6 text-neutral-600 dark:text-neutral-200"
+              className="mr-6 text-neutral-100 dark:text-neutral-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +105,7 @@ const Footer = () => {
             </a>
             <a
               href="#!"
-              className="mr-6 text-neutral-600 dark:text-neutral-200"
+              className="mr-6 text-neutral-100 dark:text-neutral-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +122,7 @@ const Footer = () => {
             </a>
             <a
               href="#!"
-              className="mr-6 text-neutral-600 dark:text-neutral-200"
+              className="mr-6 text-neutral-100 dark:text-neutral-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +135,7 @@ const Footer = () => {
             </a>
             <a
               href="#!"
-              className="mr-6 text-neutral-600 dark:text-neutral-200"
+              className="mr-6 text-neutral-100 dark:text-neutral-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +146,7 @@ const Footer = () => {
                 <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
               </svg>
             </a>
-            <a href="#!" className="text-neutral-600 dark:text-neutral-200">
+            <a href="#!" className="text-neutral-100 dark:text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4"
@@ -155,22 +228,22 @@ const Footer = () => {
                 خدمات ما
               </h6>
               <p className="mb-4">
-                <a href="#!" className="text-neutral-600 dark:text-neutral-200">
+                <a href="#!" className="text-neutral-100 dark:text-neutral-200">
                   (DaaS)سرویس دهی دوآپس
                 </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-neutral-600 dark:text-neutral-200">
+                <a href="#!" className="text-neutral-100 dark:text-neutral-200">
                   سرویس‌دهی زیرساختی
                 </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-neutral-600 dark:text-neutral-200">
+                <a href="#!" className="text-neutral-100 dark:text-neutral-200">
                   خدمات نرم‌افزاری
                 </a>
               </p>
               <p>
-                <a href="#!" className="text-neutral-600 dark:text-neutral-200">
+                <a href="#!" className="text-neutral-100 dark:text-neutral-200">
                   خدمات امنیتی
                 </a>
               </p>
@@ -182,23 +255,23 @@ const Footer = () => {
               <p className="mb-4 font">
                 <a
                   href="#!"
-                  className="text-neutral-600 dark:text-neutral-200 "
+                  className="text-neutral-100 dark:text-neutral-200 "
                 >
                   پنل مدیریت
                 </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-neutral-600 dark:text-neutral-200">
+                <a href="#!" className="text-neutral-100 dark:text-neutral-200">
                   درباره ما
                 </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-neutral-600 dark:text-neutral-200">
+                <a href="#!" className="text-neutral-100 dark:text-neutral-200">
                   ورود/ثبت‌نام
                 </a>
               </p>
               <p>
-                <a href="#!" className="text-neutral-600 dark:text-neutral-200">
+                <a href="#!" className="text-neutral-100 dark:text-neutral-200">
                   استخدام
                 </a>
               </p>
@@ -215,7 +288,7 @@ const Footer = () => {
                 </svg>
                 PARS DEVOPS
               </h6>
-              <p className="text-base text-neutral-600 text-justify dark:text-neutral-200">
+              <p className="text-xl text-neutral-200 text-justify dark:text-neutral-200 ">
                 دواپس‌لند شرکتی پیشرو در حوزه دواپس است که با ارایه خدمات تخصصی
                 به شرکت های کوچک و بزرگ، کمک به بهبود روند توسعه نرم‌افزار و
                 استقرار زیرساخت قدرتمند میکند. تلاش ما افزاش بازدهی و بهره‌آوری
@@ -229,7 +302,7 @@ const Footer = () => {
 
         <div className="flex flex-col p-6 text-center dark:bg-neutral-700">
           <a
-            className="font-semibold text-neutral-600 dark:text-neutral-400"
+            className="font-semibold text-neutral-100 dark:text-neutral-400"
             href="https://tailwind-elements.com/"
           >
             پارس دوآپس
@@ -240,4 +313,5 @@ const Footer = () => {
     </section>
   );
 };
+
 export { Footer };
