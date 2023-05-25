@@ -178,37 +178,49 @@ const About = () => {
 
 const Contact = () => {
   return (
-    <section id="contact">
-      <div className="container">
-        <div className="heading-wrapper">
-          <div className="heading">
-            <p className="title">
-              Want to <br />
-              contact me?
-            </p>
-            <p className="separator" />
-            <p className="subtitle">
-              Please, use the form below or send an email to {''}
-              <span className="mail">
-                web
-                <i className="fas fa-at at" />
-                yagoestevez
-                <i className="fas fa-circle dot" />
-                com
-              </span>
-              :
-            </p>
+    <>
+      <section id="contact">
+        <div className="container">
+          <div className="heading-wrapper">
+            <div className="heading">
+              <p className="title">
+                Want to <br />
+                contact me?
+              </p>
+              <p className="separator" />
+              <p className="subtitle">
+                Please, use the form below or send an email to {''}
+                <span className="mail">
+                  web
+                  <i className="fas fa-at at" />
+                  yagoestevez
+                  <i className="fas fa-circle dot" />
+                  com
+                </span>
+                :
+              </p>
+            </div>
+            <SocialLinks />
           </div>
-          <SocialLinks />
+          <form id="contact-form" action="#">
+            <input placeholder="Name" name="name" type="text" required />
+            <input placeholder="Email" name="email" type="email" required />
+            <textarea placeholder="Message" name="message" />
+            <input
+              className="button"
+              id="submit"
+              value="Submit"
+              type="submit"
+            />
+          </form>
         </div>
-        <form id="contact-form" action="#">
-          <input placeholder="Name" name="name" type="text" required />
-          <input placeholder="Email" name="email" type="email" required />
-          <textarea placeholder="Message" name="message" />
-          <input className="button" id="submit" value="Submit" type="submit" />
-        </form>
-      </div>
-    </section>
+      </section>
+      <section id="contactt">
+        <div className="containerr">
+          <Footer />
+        </div>
+      </section>
+    </>
   );
 };
 

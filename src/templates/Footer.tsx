@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <section>
-      <div className="text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
+      <div className="text-center text-neutral-600  lg:text-left">
         <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
           <div className="flex justify-center">
             <a
@@ -92,7 +92,7 @@ const Footer = () => {
         <div className="mx-6 py-10 text-center md:text-left">
           <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4 text-lg">
             <div>
-              <h6 className="mb-4 flex justify-center text-xl font-semibold uppercase ">
+              <h6 className="mb-4 flex justify-center text-xl font-semibold uppercase dark:text-neutral-200 ">
                 تماس با ما
               </h6>
               <p className="mb-4 flex items-center justify-center ">
@@ -215,7 +215,7 @@ const Footer = () => {
                 </svg>
                 PARS DEVOPS
               </h6>
-              <p className="text-base text-justify">
+              <p className="text-base text-neutral-600 text-justify dark:text-neutral-200">
                 دواپس‌لند شرکتی پیشرو در حوزه دواپس است که با ارایه خدمات تخصصی
                 به شرکت های کوچک و بزرگ، کمک به بهبود روند توسعه نرم‌افزار و
                 استقرار زیرساخت قدرتمند میکند. تلاش ما افزاش بازدهی و بهره‌آوری
