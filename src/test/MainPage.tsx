@@ -1,41 +1,11 @@
 import React from 'react';
+
+import { Footer } from '../templates/Footer';
+
+// import { Footer } from '../templates/Footer';
+
 // Made by Yago Estévez (Twitter: @yagoestevez.com)
 // @ts-ignore
-
-const SocialLinks = () => {
-  return (
-    <div className="social">
-      <a
-        href="https://twitter.com/yagoestevez"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Link to author's Twitter profile"
-      >
-        {' '}
-        <i className="fab fa-twitter" />
-      </a>
-      <a
-        id="profile-link"
-        href="https://github.com/yagoestevez"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Link to author's GitHub Profile"
-      >
-        {' '}
-        <i className="fab fa-github" />
-      </a>
-      <a
-        href="https://codepen.io/yagoestevez"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Link to author's Codepen Profile"
-      >
-        {' '}
-        <i className="fab fa-codepen" />
-      </a>
-    </div>
-  );
-};
 
 /** *********************
     Nav Component
@@ -171,57 +141,9 @@ const About = () => {
     Contact Component
    ********************** */
 
-const Contact = () => {
-  return (
-    <section id="contact">
-      <div className="container">
-        <div className="heading-wrapper">
-          <div className="heading">
-            <p className="title">
-              Want to <br />
-              contact me?
-            </p>
-            <p className="separator" />
-            <p className="subtitle">
-              Please, use the form below or send an email to {''}
-              <span className="mail">
-                web
-                <i className="fas fa-at at" />
-                yagoestevez
-                <i className="fas fa-circle dot" />
-                com
-              </span>
-              :
-            </p>
-          </div>
-          <SocialLinks />
-        </div>
-        <form id="contact-form" action="#">
-          <input placeholder="Name" name="name" type="text" required />
-          <input placeholder="Email" name="email" type="email" required />
-          <textarea placeholder="Message" name="message" />
-          <input className="button" id="submit" value="Submit" type="submit" />
-        </form>
-      </div>
-    </section>
-  );
-};
-
 /** *********************
     Footer Component
    ********************** */
-
-const Footer = () => {
-  return (
-    <footer>
-      <div className="wrapper">
-        <h3>THANKS FOR VISITING</h3>
-        <p>© {new Date().getFullYear()} Yago Estévez.</p>
-        <SocialLinks />
-      </div>
-    </footer>
-  );
-};
 
 /** *********************
     Social Links Component
@@ -256,7 +178,6 @@ export default class App extends React.Component {
         <Nav toggleMenu={this.toggleMenu} showMenu={this.state.menuState} />
         <Header />
         <About />
-        <Contact />
         <Footer />
       </>
     );
