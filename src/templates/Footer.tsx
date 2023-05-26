@@ -42,7 +42,7 @@ const ContactEmail = () => {
             <p className="title">
               برای دریافت مشاوره و راهنمایی با ما درارتباط باشید
             </p>
-            <p className="separator" />
+            <br></br>
             <p className="subtitle">فرم درخواست مشاوره را پر کنید</p>
           </div>
           <SocialLinks />
@@ -288,7 +288,7 @@ const Footer = () => {
                 </svg>
                 PARS DEVOPS
               </h6>
-              <p className="text-xl text-neutral-200 text-justify dark:text-neutral-200 ">
+              <p className="tracking-widest text-xl text-neutral-200 text-justify dark:text-neutral-200">
                 دواپس‌لند شرکتی پیشرو در حوزه دواپس است که با ارایه خدمات تخصصی
                 به شرکت های کوچک و بزرگ، کمک به بهبود روند توسعه نرم‌افزار و
                 استقرار زیرساخت قدرتمند میکند. تلاش ما افزاش بازدهی و بهره‌آوری

@@ -35,7 +35,7 @@ body {
 
 a,
 a:visited {
-  color: #252934;
+  color: rgb(240, 240, 240);
   font-size: 1.4rem;
   text-decoration: none;
   transition: 200ms;
