@@ -8,7 +8,9 @@ const Base = () => (
   //   <Banner />
   //   <Footer />
   // </div>
-  <App></App>
+  <>
+    <App></App>
+  </>
 );
 
 export { Base };

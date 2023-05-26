@@ -1,11 +1,70 @@
 import React from 'react';
 
+import { Header } from '../header/Header';
 import { Footer } from '../templates/Footer';
 
-// import { Footer } from '../templates/Footer';
+const SocialLinks = () => {
+  return (
+    <div className="social">
+      <a
+        href="https://twitter.com/yagoestevez"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Link to author's Twitter profile"
+      >
+        {' '}
+        <i className="fab fa-twitter" />
+      </a>
+      <a
+        id="profile-link"
+        href="https://github.com/yagoestevez"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Link to author's GitHub Profile"
+      >
+        {' '}
+        <i className="fab fa-github" />
+      </a>
+      <a
+        href="https://codepen.io/yagoestevez"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Link to author's Codepen Profile"
+      >
+        {' '}
+        <i className="fab fa-codepen" />
+      </a>
+    </div>
+  );
+};
+const Menu = (props: any) => {
+  return (
+    <div className={`menu-container ${props.showMenu}`}>
+      <div className="overlay" />
+      <div className="menu-items">
+        <ul>
+          <li>
+            <a href="#welcome-section" onClick={props.toggleMenu}>
+              خانه
+            </a>
+          </li>
+          <li>
+            <a href="#about" onClick={props.toggleMenu}>
+              درباره ما
+            </a>
+          </li>
 
-// Made by Yago Estévez (Twitter: @yagoestevez.com)
-// @ts-ignore
+          <li>
+            <a href="#contact" onClick={props.toggleMenu}>
+              ارتباط با ما
+            </a>
+          </li>
+        </ul>
+        <SocialLinks />
+      </div>
+    </div>
+  );
+};
 
 /** *********************
     Nav Component
@@ -17,8 +76,7 @@ const Nav = props => {
       <nav id="navbar">
         <div className="nav-wrapper">
           <p className="brand">
-            yago
-            <strong>estévez</strong>
+            <strong>ParsDevops</strong>
           </p>
           <a
             onClick={props.toggleMenu}
@@ -38,38 +96,16 @@ const Nav = props => {
     Header Component
    ********************** */
 
-const Header = () => {
-  return (
-    <header id="welcome-section">
-      <div className="forest" />
-      <div className="silhouette bg-[url('/assets/images/devops.png')] bg-no-repeat " />
-      <div className="moon" />
-      <div className="container">
-        <h1>
-          <span className="line">Devops</span>
-          <span className="line">ParsDevops</span>
-          <span className="line">
-            <span className="color">&</span> code.
-          </span>
-        </h1>
-        <div className="buttons">
-          <a href="#projects">contact us</a>
-          <a href="#contact" className="cta">
-            more detail
-          </a>
-        </div>
-      </div>
-    </header>
-  );
-};
-
 /** *********************
     About Component
    ********************** */
 
 const About = () => {
   return (
-    <section id="about">
+    <section
+      id="about"
+      className="bg-[url('/assets/images/devops.png')] bg-no-repeat "
+    >
       <div className="wrapper">
         <article>
           <div className="title">
@@ -174,7 +210,7 @@ export default class App extends React.Component {
   render() {
     return (
       <>
-        {/* <Menu toggleMenu={this.toggleMenu} showMenu={this.state.menuState} /> */}
+        <Menu toggleMenu={this.toggleMenu} showMenu={this.state.menuState} />
         <Nav toggleMenu={this.toggleMenu} showMenu={this.state.menuState} />
         <Header />
         <About />

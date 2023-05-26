@@ -43,8 +43,9 @@ a:visited {
 
 a:hover,
 a:active {
-  color: #f300b4;
+  color: #00f3e3;
 }
+
 /*****************
  *****************
     MENU STYLES
@@ -86,6 +87,193 @@ a:active {
   to {
     left: 0;
     width: calc(100vw - 120px);
+  }
+}
+
+/***** Menu Layer *****/
+.menu-container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, #59789e 0%, #071739 80%);
+  border: 60px solid #181d23;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.menu-container::before,
+.menu-container::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  z-index: -1;
+}
+
+.menu-container::before {
+  background: url('/assets/images/skynight.jpg');
+}
+
+/* .menu-container::after {
+  background: url(https://raw.githubusercontent.com/yagoestevez/fcc-portfolio/master/src/Images/Trees.svg?sanitize=true) bottom repeat-x;
+} */
+
+.menu-container.deactive {
+  animation: fade-out 600ms forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    z-index: 999;
+  }
+  50% {
+    opacity: 1;
+    z-index: 999;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.menu-container.active {
+  animation: fade-in 300ms forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    z-index: -1;
+  }
+  to {
+    opacity: 1;
+    z-index: 999;
+  }
+}
+
+/***** Menu Items: Animation *****/
+.menu-container ul,
+.menu-container .social {
+  margin-left: -80px;
+  opacity: 0;
+  animation: slide-out 200ms forwards;
+}
+
+.menu-container ul {
+  list-style-type: none !important;
+  font-size: 3rem;
+}
+
+@keyframes slide-out {
+  from {
+    opacity: 1;
+    margin-left: 0px;
+  }
+  to {
+    opacity: 0;
+    margin-left: -80px;
+  }
+}
+
+.menu-container.active ul,
+.menu-container.active .social {
+  animation: slide-in 300ms forwards 600ms;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    margin-left: -80px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+/***** Menu Items: Hover Animation *****/
+.menu-container ul li {
+  border-left: 0.2rem solid transparent;
+  transition: border-left 200ms;
+}
+
+.menu-container ul li a {
+  font-size: 3rem;
+  padding-left: 0.5rem;
+}
+
+.menu-container ul li a::after {
+  content: ' »';
+  font-size: 2.5rem;
+  color: transparent;
+  transition: color 200ms;
+}
+
+.menu-container ul li a:hover::after {
+  content: ' »';
+  color: #2cc4c2;
+}
+
+.social {
+  padding: 1rem 0 0 0.5rem;
+}
+
+.social a {
+  font-size: 1.5rem;
+  padding: 0.2rem;
+}
+
+.menu-container a,
+.menu-container a:visited {
+  color: #fafafa;
+}
+
+.menu-container a:hover,
+.menu-container a:active {
+  color: #2cc4c2;
+}
+
+@media only screen and (max-width: 649px) {
+  .menu-container {
+    border: none;
+  }
+
+  .menu-container > .overlay,
+  .menu-container.active > .overlay {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .menu-container.active > .overlay {
+    animation: overlay-slide-in 300ms forwards 300ms;
+  }
+
+  @keyframes overlay-slide-in {
+    from {
+      width: 100vw;
+    }
+    to {
+      width: 0;
+    }
+  }
+
+  .menu-container > .overlay {
+    animation: overlay-slide-out 300ms forwards;
+  }
+
+  @keyframes overlay-slide-out {
+    from {
+      left: 0;
+      width: 0;
+    }
+    to {
+      left: 0;
+      width: 100vw;
+    }
   }
 }
 
@@ -160,7 +348,7 @@ a:active {
 .menu-button:hover > span,
 .menu-button:hover > span::before,
 .menu-button:hover > span::after {
-  background: #f300b4;
+  background: #00f3c6;
 }
 
 .menu-button.active > span {
@@ -190,8 +378,8 @@ a:active {
  *****************/
 
 #welcome-section {
-  background: #202736;
-  background: linear-gradient(to bottom, #181d23 0%, #202736 80%);
+  background: #2cc4c2;
+  background: linear-gradient(to bottom, #5e87b9 0%, #071739 80%);
   background-attachment: fixed;
   background-size: cover;
   position: relative;
@@ -203,13 +391,15 @@ a:active {
 #welcome-section::before {
   content: '';
   position: fixed;
-  background: url(https://raw.githubusercontent.com/yagoestevez/fcc-portfolio/master/src/Images/Stars.svg?sanitize=true);
+  background: url('/assets/images/cloud1.jpg') no-repeat;
+  background-size: cover;
   background-attachment: fixed;
   width: 100%;
   min-height: 100vh;
   z-index: -1;
   opacity: 0;
   animation: stars-move-in 1000ms 300ms forwards;
+  background-size: 100%;
 }
 
 @keyframes stars-move-in {
@@ -222,7 +412,7 @@ a:active {
   }
 }
 
-.forest {
+/* .forest {
   position: absolute;
   bottom: -300px;
   left: 0;
@@ -234,7 +424,7 @@ a:active {
   opacity: 0;
   animation: forest-move-in 1000ms 500ms forwards;
   border-bottom: 300px solid #181d23;
-}
+} */
 
 @keyframes forest-move-in {
   from {
@@ -246,16 +436,16 @@ a:active {
   }
 }
 
-.silhouette {
+/* .silhouette {
   position: absolute;
   bottom: 0;
   left: 0;
-  /* background: url(`${router.basePath}${props.image}` ) bottom left no-repeat; */
+   background: url('/assets/images/devops.png') bottom left no-repeat; 
   width: 50%;
   height: 50%;
   opacity: 0;
   animation: silhouette-move-in 1000ms 800ms forwards;
-}
+} */
 
 @keyframes silhouette-move-in {
   from {
@@ -298,8 +488,9 @@ a:active {
 #welcome-section .container {
   width: fit-content;
   position: absolute;
+
+  top: 25%;
   right: 0;
-  top: 50%;
   right: 25%;
   opacity: 0;
   transform: translate(0, -50%);
@@ -312,7 +503,7 @@ a:active {
   }
   to {
     opacity: 1;
-    right: 25%;
+    right: 15%;
   }
 }
 
@@ -350,14 +541,14 @@ a:active {
 
 #welcome-section .container .buttons a:hover,
 #welcome-section .container .buttons a:active {
-  border: 1px solid #f300b4;
+  border: 1px solid #2ef7c4;
   transform: translateY(-2px);
-  box-shadow: 0 10px 100px -20px #f300b4;
+  box-shadow: 0 10px 100px -20px #00f3cb;
 }
 
 #welcome-section .container .buttons a.cta,
 #welcome-section .container .buttons a.cta:visited {
-  background: #3500f3;
+  background: #2cc4c2;
   border: 1px solid transparent;
   color: #fafafa;
   font-weight: bold;
@@ -366,7 +557,7 @@ a:active {
 #welcome-section .container .buttons a.cta:hover,
 #welcome-section .container .buttons a.cta:active {
   background: transparent;
-  border: 1px solid #f300b4;
+  border: 1px solid #00f3db;
 }
 
 #welcome-section .container .buttons a:first-child {
@@ -378,7 +569,7 @@ a:active {
 }
 
 .color {
-  color: #f300b4;
+  color: #00f3cb;
   font-style: italic;
 }
 
@@ -420,10 +611,10 @@ a:active {
   background: #fafafa;
   clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
   z-index: 5;
-  background: #fafafa
-    url(https://raw.githubusercontent.com/yagoestevez/fcc-portfolio/master/src/Images/Author_BG.jpg)
+  /* background: #fafafa
+  url('/assets/images/cloud.jpg')
     center right no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed;   background-size: 100% 100%; */
 }
 
 #about .wrapper {
@@ -453,7 +644,7 @@ a:active {
 }
 
 #about .separator {
-  background: #a600f3;
+  background: #2cc4c2;
   width: 150px;
   height: 2px;
   margin: 1rem 0;
@@ -548,7 +739,7 @@ a:active {
 }
 
 #contact .heading-wrapper .social a:hover {
-  color: #7628ba;
+  color: #15e9e9;
 }
 
 .heading-wrapper .heading .title {
@@ -599,11 +790,11 @@ input[type='email']:focus,
 input[type='text']:not(output):focus,
 input[type='email']:not(output):focus,
 textarea:focus {
-  border-bottom: 1px solid #5900f3;
+  border-bottom: 1px solid #2cc4c2;
 }
 
 input[type='submit'] {
-  background: #2900f3;
+  background: #2cc4c2;
   color: #fafafa;
   margin-top: 1rem;
   width: auto;
@@ -631,7 +822,7 @@ input[type='submit']:focus {
 .mail .dot {
   font-size: 0.9rem;
   margin: 0 0.1rem;
-  color: #6500f3;
+  color: #2cc4c2;
 }
 
 @media only screen and (max-width: 1149px) {
