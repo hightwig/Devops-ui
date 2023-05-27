@@ -26,7 +26,7 @@ const VerticalFeatures = () => (
       <VerticalFeatureRow
         title="Customer satisfaction"
         description="سرویس پارس دوآپس به شما کمک میکند فرآیند توسعه، تست و انتشار نرم‌افزار به صورت خودکار و مداوم انجام شود. این ویژگی باعث می‌شود که زمان تحویل نرم‌افزار به مشتریان کاهش یابد،  کیفیت آن بهبود پیدا کند و خطاهای احتمالی در طول فرآیند به حداقل برسند."
-        image="\assets\images\feature3.svg"
+        image="\assets\images\customer.png"
         imageAlt=" feature alt text"
         reverse
       />
