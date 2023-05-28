@@ -18,8 +18,6 @@ html {
   box-sizing: border-box;
 }
 
-@import 'https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script';
-
 html,
 body {
   height: 100%;
@@ -29,7 +27,6 @@ body {
   color: #252934;
   background: #fafafa;
   font-size: 62.5%;
-  font-family: 'Overlock', Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
 
@@ -391,7 +388,7 @@ a:active {
 #welcome-section::before {
   content: '';
   position: fixed;
-  background: url('/assets/images/cloud1.jpg') no-repeat;
+  background: url('/assets/images/cloud2.jpg') no-repeat;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
@@ -727,7 +724,7 @@ a:active {
   background: #181d23
     url(https://raw.githubusercontent.com/yagoestevez/fcc-portfolio/master/src/Images/envelope.svg?sanitize=true)
     no-repeat right;
-  clip-path: polygon(0 0, 20% 100px, 100% 0, 100% 100%, 0 100%);
+  /* clip-path: polygon(0 0, 20% 100px, 100% 0, 100% 100%, 0 100%); */
   color: #fafafa;
   min-height: 100vh;
   width: 100%;
@@ -736,7 +733,7 @@ a:active {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: -100px 0 140px;
+  margin: -100px 0;
   z-index: 1;
 }
 #contact .container {
@@ -781,7 +778,6 @@ input,
 textarea {
   border: none;
   padding: 1rem;
-  font-family: 'Overlock', Arial, Helvetica, sans-serif;
   width: 100%;
   height: 40%;
   transition: 200ms;

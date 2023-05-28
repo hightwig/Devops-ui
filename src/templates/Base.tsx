@@ -10,7 +10,8 @@ const Base = () => (
   //   <Footer />
   // </div>
   <>
-    <App></App>
+    {' '}
+    <App></App>{' '}
   </>
 );
 

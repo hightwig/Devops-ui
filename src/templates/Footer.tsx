@@ -40,7 +40,7 @@ const ContactEmail = () => {
         <div className="heading-wrapper">
           <div className="heading">
             <p className="title">
-              برای دریافت مشاوره و راهنمایی با ما درارتباط باشید
+              برای دریافت مشاوره و راهنمایی با ما در ارتباط باشید
             </p>
             <br></br>
             <p className="subtitle">فرم درخواست مشاوره را پر کنید</p>
@@ -288,30 +288,27 @@ const Footer = () => {
                 </svg>
                 PARS DEVOPS
               </h6>
-              <div dir="rtl">
-                <p className="leading-9 text-xl text-neutral-200 text-justify dark:text-neutral-200">
-                  دواپس‌لند شرکتی پیشرو در حوزه دواپس است که با ارایه خدمات
-                  تخصصی به شرکت های کوچک و بزرگ، کمک به بهبود روند توسعه
-                  نرم‌افزار و استقرار زیرساخت قدرتمند میکند. تلاش ما افزاش
-                  بازدهی و بهره‌آوری محصولات نرم‌افزاری است که با تکیه بر دانش
-                  دوآپس در این مسیر همراه شما خواهیم بود. برای اطلاع از سرویس ها
-                  و مشاوره ها پارس‌دوآپس با ما درارتباط باشید .
-                </p>
-              </div>
+              <p className="tracking-widest text-xl text-neutral-200 text-justify dark:text-neutral-200">
+                دواپس‌لند شرکتی پیشرو در حوزه دواپس است که با ارایه خدمات تخصصی
+                به شرکت های کوچک و بزرگ، کمک به بهبود روند توسعه نرم‌افزار و
+                استقرار زیرساخت قدرتمند میکند. تلاش ما افزایش بازدهی و بهره‌آوری
+                محصولات نرم‌افزاری است که با تکیه بر دانش دوآپس در این مسیر
+                همراه شما خواهیم بود. برای اطلاع از سرویس ها و مشاوره ها
+                پارس‌دوآپس با ما در ارتباط باشید
+              </p>
             </div>
           </div>
         </div>
-
-        <div className="flex flex-col p-6 text-center dark:bg-neutral-700">
-          <a
-            className="font-semibold text-neutral-100 dark:text-neutral-400"
-            href="https://tailwind-elements.com/"
-          >
-            پارس دوآپس
-          </a>
-          © 2023 Copyright: تمامی حقوق مادی و معنوی متعلق به پارس دواپس می‌باشد
-        </div>
-      </div>
+        <section>
+          <div id="moreinfo" className="flex flex-col p-6 text-center  ">
+            <a className="font-semibold text-neutral-100 " href="#">
+              پارس دوآپس
+            </a>
+            © 2023 Copyright: تمامی حقوق مادی و معنوی متعلق به پارس دواپس
+            می‌باشد
+          </div>
+        </section>
+      </div>{' '}
     </section>
   );
 };
