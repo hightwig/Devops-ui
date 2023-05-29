@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Header } from '../header/Header';
 import { Footer } from '../templates/Footer';
+import { VerticalFeatures } from '../templates/VerticalFeatures';
 
 const SocialLinks = () => {
   return (
@@ -106,6 +107,7 @@ const About = () => {
       id="about"
       className="bg-[url('/assets/images/devops.png')] bg-no-repeat "
     >
+      <VerticalFeatures />
       <div className="wrapper">
         <article>
           <div className="title">
@@ -213,6 +215,7 @@ export default class App extends React.Component {
         <Menu toggleMenu={this.toggleMenu} showMenu={this.state.menuState} />
         <Nav toggleMenu={this.toggleMenu} showMenu={this.state.menuState} />
         <Header />
+
         <About />
         <Footer />
       </>

@@ -11,10 +11,9 @@ const Header = () => {
         <h1>
           <span className="line">به پارس دوآپس خوش آمدید </span>
           <br />
-          <span className="line">devops security</span>
+          <span className="leading-10 line">devops </span>
           <span className="line">
-            <br />
-            <span className="color">&</span> Tools.
+            <span className="color">as </span>a service.
           </span>
         </h1>
         <div className="buttons">

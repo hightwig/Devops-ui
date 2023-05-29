@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import className from 'classnames';
 import { useRouter } from 'next/router';
 
@@ -11,6 +13,9 @@ type IVerticalFeatureRowProps = {
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
   const verticalFeatureClass = className(
+    'scroll-reveal',
+    'verticalFeature',
+    `${props.reverse ? 'left' : 'right'}`,
     'mt-20',
     'flex',
     'flex-wrap',
@@ -19,9 +24,37 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
       'flex-row-reverse': props.reverse,
     }
   );
+  function addObserver(
+    el: Element,
+    options: IntersectionObserverInit | undefined
+  ) {
+    const observer = new IntersectionObserver((entries, observe) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observe.unobserve(entry.target);
+        }
+      });
+    }, options); // Passing the options object to the observer
+    observer.observe(el);
+  }
+
+  useEffect(() => {
+    function scrollTrigger(selector: string, options = {}) {
+      let els = document.querySelectorAll(selector);
+      // @ts-ignore
+      els = Array.from(els);
+      els.forEach(el => {
+        // Passing the options object to the addObserver function
+        addObserver(el, options);
+      });
+    }
+    scrollTrigger('.scroll-reveal', {
+      rootMargin: '-400px',
+    });
+  }, []);
 
   const router = useRouter();
-
   return (
     <div className={verticalFeatureClass}>
       <div className="w-full sm:w-1/2 text-center sm:px-6">
