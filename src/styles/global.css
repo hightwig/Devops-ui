@@ -890,3 +890,35 @@ footer .wrapper {
     padding-bottom: 0.8rem;
   }
 }
+@keyframes typeIn {
+  to {
+    width: 28ch;
+  }
+}
+
+
+@media only screen and (min-width: 649px) {
+  .verticalFeature {
+    /* margin-left: calc(50% - 100px); */
+    transition: transform 1s, opacity 1s;
+    text-fade-in: 1000ms 800ms forwards;
+    transition-timing-function: ease;
+    font-weight: bold;
+  }
+  .verticalFeature.left {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  .verticalFeature.right {
+    transform: translateX(300px);opacity: 0;
+  }
+  
+  .verticalFeature.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  .loader {
+    text-align: center;
+  }
+}
