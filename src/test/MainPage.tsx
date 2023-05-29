@@ -111,54 +111,62 @@ const About = () => {
       <div className="wrapper">
         <article>
           <div className="title">
-            <h3>Who&apos;s this guy?</h3>
+            <h3>چرا پارس دوآپس</h3>
             <p className="separator" />
           </div>
           <div className="desc full">
-            <h4 className="subtitle">My name is Yago.</h4>
             <p>
-              I am a web developer and UX designer based in the beautiful west
-              coast of Spain, Galicia.
-            </p>
-            <p>
-              I really enjoy solving problems as well as making things pretty
-              and easy to use. I can&apos;t stop learning new things; the more,
-              the better. I also love photography, a hobby I&apos;m taking along
-              the good old film cameras. Oh, and rice with milk; I have a
-              passion for rice with milk!
+              شرکت پارس دوآپس با هدف توسعه زیرساخت و روند تولید محصولات
+              نرم‌افزاری با پشتوانه تیمی تخصصی و جوان در حوزه کامپیوتر همواره در
+              تلاش است تا با ارايه راهکار های نوین و خلاقانه علاوه بر تسریع
+              توسعه نرم افزار، کمک به افزایش رضایت مشتری کند. عدم هماهنگی کامل
+              بین تیم های توسعه دهنده و پشتیان و همچنین ضعف در حوزه تست محصولات
+              یکی از دلایل اصلی شکل گیری پارس دوآپس بود. با توجه به وجود ضعف در
+              شرکت های سرویس دهنده در مقیاس بالا، نیاز جدی برای وجود تیم دوآپس
+              احساس میشود. از جمله مشکلات موجود، عدم وجود مکانزیم کنترل سرویس
+              دهی محصول است که یکی از خدمات اصلی شرکت ما، مقیاس دهی مناسب با
+              درخواست ها و منابع موجود است.
             </p>
           </div>
           <div className="title">
-            <h3>What does he do?</h3>
+            <h3>سرویس ما</h3>
             <p className="separator" />
           </div>
           <div className="desc">
-            <h4 className="subtitle">I&apos;m a programmer.</h4>
+            <h4 className="subtitle">سرویس آنها چیست</h4>
             <p>
-              For the front-end I usually work with Javascript, either
-              standalone or including popular frameworks like ReactJS and VueJS.
-              I also make the web pretty by using Sass, CSS and, whenever
-              needed, any of their friends: Bootstrap, Bulma, etc.
-            </p>
-            <p>
-              For the back-end I also work with Javascript (NodeJS, Express,
-              MongoDB, etc). But, of course, whenever the project requires PHP,
-              I do PHP as well (Wordpress, Laravel, etc).
+              پیاده سازی محصولات بر بستر های ابری ضمانت و اطمینان بیشتری را هم
+              از جهت امنیتی و هم از جهت پایداری به ما میدهد. از جمله مباحث موجود
+              در این حوزه، مطالعه و بررسی چگونگی حفظ امنیت و یکپارچگی برنامه در
+              Cluster است. امروزه ابزار های متعددی برای مدیریت منابع و نظارت بر
+              امنیت Cluster توسعه داده شده‌اند که مطالعه آنها یکی از اهداف این
+              پروژه است. همچنین تحقیق درباره مسائل مدیریت انتقال داده امن و
+              مشاهده جریان عبوری دیتا درون کلاستر از چالش های این حوزه میباشد.
+              درصورت امکان و وجود منابع و زمان مورد نیاز، یکی از گام های عملیاتی
+              این پروژه ایجاد بستری برای ارایه خدمات ابری مبتنی برCluster است که
+              نقطه قوت آن نسبت به نسخه های مشابه خارجی، ارایه سرویس ها و قابلیت
+              های امنیتی است. این ابزارها با هدف بررسی متناوب کلاستر و نظارت بر
+              دیتای ورودی و مدیریت انتقال آن، سبب شناسایی آسیب‌پذیری های موجود
+              در برنامه و جلوگیری از حملات احتمالی میشود.
             </p>
           </div>
           <div className="desc">
-            <h4 className="subtitle">Also a designer.</h4>
+            <h4 className="subtitle">سرویس ما چیست</h4>
             <p>
-              I feel comfortable working with many Adobe products. Photoshop,
-              Illustrator, InDesign, Lightroom or Xd are some kind of industry
-              standards and I love working with them. I&apos;m not limited to
-              though: Gimp, Inkscape or Figma are also very valid applications
-              that I&apos;ve been working with.
-            </p>
-            <p>
-              User interfaces, brochures, books, branding... You name it! As I
-              mentioned, creating pretty things is particularly important for
-              me.
+              یکی از مهم ترین مباحث مطرح شده در دنیای امروز کامپیوتر، ایجاد
+              بستری مناسب و امن برای پیاده سازی و توسعه محصول است. امروزه طراحی
+              و استفاده از مفهوم microservice ها، صرفه جویی قابل ملاحظه ای در
+              زمان و منابع میکند. یکی از ابزار هایی که در حوزه DevOps امکانات
+              زیادی را فراهم میکند Kubernetes است. این ابزار با تکیه بر مفهوم
+              مایکروسرویس ها، قابلیت های زیادی از جمله مدیریت بهینه منابع موجود
+              برحسب نیاز، هم تراز شدن توان پاسخ دهی برنامه با میزان درخواست های
+              دریافت شده،‌ ضمانت دسترسی همیشگی به برنامه و ... به همراه دارد.
+              استفاده از این ابزار در محصولات توانایی کنترل و نظارت بیشتری را به
+              توسعه دهندگان میدهد. یکی از مفاهیم بنیادین در Kubernetes، استفاده
+              از Cluster و مدیریت ارتباط بین ارگان های مختلف برنامه است که این
+              امکان را به ما میدهد تا علاوه بر انسجام درونی، قدرت بیشتری در
+              تفکیک سرویس های مختلف از یکدیگر و تعریف مایکروسرویس ها داشته
+              باشیم.
             </p>
           </div>
         </article>
