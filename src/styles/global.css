@@ -48,7 +48,7 @@ a:active {
     MENU STYLES
  *****************
  *****************/
-
+ 
 /***** Overlay Layer *****/
 .menu-container > .overlay,
 .menu-container.active > .overlay {
@@ -86,8 +86,6 @@ a:active {
     width: calc(100vw - 120px);
   }
 }
-
-/***** Menu Layer *****/
 .menu-container {
   position: fixed;
   height: 100vh;
@@ -114,9 +112,6 @@ a:active {
   background: url('/assets/images/skynight.jpg');
 }
 
-/* .menu-container::after {
-  background: url(https://raw.githubusercontent.com/yagoestevez/fcc-portfolio/master/src/Images/Trees.svg?sanitize=true) bottom repeat-x;
-} */
 
 .menu-container.deactive {
   animation: fade-out 600ms forwards;
@@ -409,77 +404,10 @@ a:active {
   }
 }
 
-/* .forest {
-  position: absolute;
-  bottom: -300px;
-  left: 0;
-  background: url(https://raw.githubusercontent.com/yagoestevez/fcc-portfolio/master/src/Images/Trees.svg?sanitize=true)
-    bottom left repeat-x;
-  background-size: cover;
-  width: 100%;
-  height: 80%;
-  opacity: 0;
-  animation: forest-move-in 1000ms 500ms forwards;
-  border-bottom: 300px solid #181d23;
-} */
 
-@keyframes forest-move-in {
-  from {
-    background-position-y: 150%;
-  }
-  to {
-    opacity: 1;
-    background-position-y: 100%;
-  }
-}
 
-/* .silhouette {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-   background: url('/assets/images/devops.png') bottom left no-repeat; 
-  width: 50%;
-  height: 50%;
-  opacity: 0;
-  animation: silhouette-move-in 1000ms 800ms forwards;
-} */
 
-@keyframes silhouette-move-in {
-  from {
-    background-position-x: 0;
-  }
-  to {
-    opacity: 1;
-    background-position-x: 50%;
-  }
-}
 
-.moon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  position: fixed;
-  background: url(https://raw.githubusercontent.com/yagoestevez/fcc-portfolio/master/src/Images/Moon.svg?sanitize=true)
-    right 150% no-repeat;
-  background-size: 40% 40%;
-  background-attachment: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0;
-  animation: moon-move-in 1.2s 1s forwards;
-}
-
-@keyframes moon-move-in {
-  from {
-    opacity: 0;
-    background-position: right 150%;
-  }
-  to {
-    opacity: 1;
-    background-position: top right;
-  }
-}
 
 /* Copy and CTA */
 #welcome-section .container {
@@ -547,7 +475,7 @@ a:active {
   color: #fafafa;
   text-align: center;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 #welcome-section .container .buttons a:hover,
@@ -724,7 +652,7 @@ a:active {
   background: #181d23
     url(https://raw.githubusercontent.com/yagoestevez/fcc-portfolio/master/src/Images/envelope.svg?sanitize=true)
     no-repeat right;
-  /* clip-path: polygon(0 0, 20% 100px, 100% 0, 100% 100%, 0 100%); */
+   clip-path: polygon(0 0, 20% 100px, 100% 0, 100% 100%, 0 100%); 
   color: #fafafa;
   min-height: 100vh;
   width: 100%;
@@ -892,7 +820,6 @@ footer .wrapper {
   }
 }
 
-
 @media only screen and (min-width: 649px) {
   .verticalFeature {
     /* margin-left: calc(50% - 100px); */
@@ -906,14 +833,15 @@ footer .wrapper {
     opacity: 0;
   }
   .verticalFeature.right {
-    transform: translateX(300px);opacity: 0;
+    transform: translateX(300px);
+    opacity: 0;
   }
-  
+
   .verticalFeature.active {
     transform: translateX(0);
     opacity: 1;
   }
-  
+
   .loader {
     text-align: center;
   }

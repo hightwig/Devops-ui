@@ -114,7 +114,7 @@ const About = () => {
             <h3>چرا پارس دوآپس</h3>
             <p className="separator" />
           </div>
-          <div className="desc full">
+          <div dir="rtl" className="desc full">
             <p>
               شرکت پارس دوآپس با هدف توسعه زیرساخت و روند تولید محصولات
               نرم‌افزاری با پشتوانه تیمی تخصصی و جوان در حوزه کامپیوتر همواره در
@@ -132,7 +132,7 @@ const About = () => {
             <h3>سرویس ما</h3>
             <p className="separator" />
           </div>
-          <div className="desc">
+          <div dir="rtl" className="desc">
             <h4 className="subtitle">سرویس آنها چیست</h4>
             <p>
               پیاده سازی محصولات بر بستر های ابری ضمانت و اطمینان بیشتری را هم
@@ -150,7 +150,7 @@ const About = () => {
               در برنامه و جلوگیری از حملات احتمالی میشود.
             </p>
           </div>
-          <div className="desc">
+          <div dir="rtl" className="desc">
             <h4 className="subtitle">سرویس ما چیست</h4>
             <p>
               یکی از مهم ترین مباحث مطرح شده در دنیای امروز کامپیوتر، ایجاد
