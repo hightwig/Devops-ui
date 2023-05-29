@@ -50,42 +50,9 @@ a:active {
  *****************/
 
 /***** Overlay Layer *****/
-.menu-container > .overlay,
-.menu-container.active > .overlay {
-  position: absolute;
-  right: 0;
-  height: calc(100vh - 120px);
-  width: calc(100vw - 120px);
-  background: #fafafa;
-}
 
-.menu-container.active > .overlay {
-  animation: overlay-slide-in 300ms forwards 300ms;
-}
 
-@keyframes overlay-slide-in {
-  from {
-    width: calc(100vw - 120px);
-  }
-  to {
-    width: 0;
-  }
-}
 
-.menu-container > .overlay {
-  animation: overlay-slide-out 300ms forwards;
-}
-
-@keyframes overlay-slide-out {
-  from {
-    left: 0;
-    width: 0;
-  }
-  to {
-    left: 0;
-    width: calc(100vw - 120px);
-  }
-}
 .menu-container {
   position: fixed;
   height: 100vh;
@@ -543,7 +510,7 @@ a:active {
   font-size: 1.4rem;
   position: relative;
   background: #fafafa;
-  clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
+  clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 0 100%);
   z-index: 5;
   /* background: #fafafa
   url('/assets/images/cloud.jpg')
@@ -824,11 +791,11 @@ footer .wrapper {
   }
   .verticalFeature.left {
     transform: translateX(-300px);
-    opacity: 0;
+    opacity: 1;
   }
   .verticalFeature.right {
     transform: translateX(300px);
-    opacity: 0;
+    opacity: 1;
   }
 
   .verticalFeature.active {
