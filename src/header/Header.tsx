@@ -17,10 +17,10 @@ const Header = () => {
           </span>
         </h1>
         <div className="buttons">
-          <a href="#contact" className="cta">
+          <a href="#moreinfo" className="cta">
             اطلاعات بیشتر
           </a>{' '}
-          <a href="#projects">
+          <a href="#contact">
             <h2>ارتباط با ما</h2>
           </a>
         </div>
